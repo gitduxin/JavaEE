@@ -1,13 +1,15 @@
 package com.dx.filter;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+//@WebFilter(urlPatterns = "/Servlet1")
 public class Filter1 implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-//        System.out.println(filterConfig.getFilterName());
-//        System.out.println(filterConfig.getInitParameter("p1"));
+        System.out.println(filterConfig.getFilterName());
+        System.out.println(filterConfig.getInitParameter("ppp"));
     }
 
     @Override
